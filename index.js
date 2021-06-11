@@ -246,15 +246,22 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(arr){
+  // create new Array
   const newArr = [];
+  // I use a for loop to cycle through the array starting at the 0th index and ending after the array reaches the final item within the array.
   for(let i = 0; i < arr.length; i++){
+    // Because the value of years is a string it needed to be split and changed to a number.
+    // I use the years variable to split the range of years into two separate items and store them in an array.
     let years = arr[i].years.split(' - ');
+    // I used the birth and death variables to access the years array and turn the item into a number.
     let birth = +years[0];
     let death = +years[1];
+    // I used an if statement to push artists within the specified range into the new array.
     if(birth >= 1901 && death <= 1999){
       newArr.push(arr[i].name)
     }
   }
+  // The array is returned outside of the for loop because it would end the loop if it were to be returned within the loop because return is terminal.
   return newArr;
 }
 
@@ -315,9 +322,12 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
+
 function lotsOfArt(arr){
+  // First I create a new array
   const newArr = [];
   for(let i = 0; i < arr.length; i++){
+    // I use an if statement within a for loop to to push the names of artists that have created more than 100 paintings. I read it in english as "IF the object at this index of the array with the key of 'paintings' (arr[i].paintings) value is greater than 100 THEN push the value of the object's key 'name' into the new array."
     if(arr[i].paintings > 100){
       newArr.push(arr[i].name);
     }
