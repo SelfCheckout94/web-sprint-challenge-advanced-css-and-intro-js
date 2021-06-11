@@ -20,6 +20,7 @@ font: inherit;
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+
 html{
     font-size:62.5%;
 }
@@ -137,7 +138,7 @@ button:hover{
 
 @media (max-width: 500px){
     a {
-        font-size: 2.1rem;
+        font-size: 1.7rem;
         padding: 0 13%;
     }
 
@@ -149,13 +150,35 @@ button:hover{
     .artists-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin: 0;
     }
 
-    img {
-        height: 13rem;
+    .title-container div {
+        background-size: cover;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .title-container hr {
+        width: 100%;
+    }
+
+    .artist {
+        width: 62%;
+        margin: 2%;
+    }
+
+    .artist img {
+        height: 39vh;
+        width: 70%;
     }
 
     .artists a {
         font-size: 1.5;
+    }
+    
+    .bio {
+        font-size: 1rem;
     }
 }
